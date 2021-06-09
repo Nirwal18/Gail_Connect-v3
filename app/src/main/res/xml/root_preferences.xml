@@ -1,0 +1,44 @@
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <PreferenceCategory app:title="@string/setting_header"
+        app:icon="@drawable/ic_baseline_phonelink_setup_24">
+
+<!--        <EditTextPreference-->
+<!--            app:key="signature"-->
+<!--            app:title="@string/signature_title"-->
+<!--            app:useSimpleSummaryProvider="true" />-->
+
+        <ListPreference
+            app:icon="@drawable/ic_baseline_brightness_medium_24"
+            app:defaultValue="default"
+            app:entries="@array/theme_entries"
+            app:entryValues="@array/theme_values"
+            app:key="theme"
+            app:title="@string/theme_title"
+            app:useSimpleSummaryProvider="true" />
+
+        <PreferenceCategory app:title="@string/sync_header"
+            app:icon="@drawable/ic_baseline_sync_24">
+
+            <SwitchPreferenceCompat
+                app:key="syncPeriodically"
+                app:title="@string/sync_title" />
+
+        </PreferenceCategory>
+        <PreferenceCategory android:title="Default values">
+
+            <EditTextPreference
+                android:defaultValue="@string/birthday_wish_default_msg"
+                android:icon="@drawable/ic_baseline_message_24"
+                android:key="default_birthday_wish_msg"
+                app:useSimpleSummaryProvider="true"
+                android:singleLine="false"
+                android:title="@string/birthday_default_msg_title" />
+        </PreferenceCategory>
+
+    </PreferenceCategory>
+
+
+
+</PreferenceScreen>

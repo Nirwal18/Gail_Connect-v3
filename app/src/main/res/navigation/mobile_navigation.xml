@@ -1,0 +1,195 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@+id/navigation_home">
+
+    <fragment
+        android:id="@+id/navigation_home"
+        android:name="com.nirwal.gailconnect.ui.home.HomeFragment"
+        android:label="@string/title_home"
+        tools:layout="@layout/fragment_home" >
+        <action
+            android:id="@+id/action_navigation_home_to_GSTINDialog"
+            app:destination="@id/GSTINDialog" />
+        <action
+            android:id="@+id/action_navigation_home_to_birthdayFragment"
+            app:destination="@id/birthdayFragment"
+            app:enterAnim="@anim/fade_in"
+            app:exitAnim="@anim/fade_out"
+            app:popEnterAnim="@anim/fade_in"
+            app:popExitAnim="@anim/fade_out" />
+        <action
+            android:id="@+id/action_navigation_home_to_usefulLinkFragment"
+            app:destination="@id/usefulLinkFragment"
+            app:enterAnim="@anim/fade_in"
+            app:exitAnim="@anim/fade_out"
+            app:popEnterAnim="@anim/fade_in"
+            app:popExitAnim="@anim/fade_out" />
+        <action
+            android:id="@+id/action_navigation_home_to_gusestHouseListFragment"
+            app:destination="@id/gusestHouseListFragment"
+            app:enterAnim="@anim/fade_in"
+            app:exitAnim="@anim/fade_out"
+            app:popEnterAnim="@anim/fade_in"
+            app:popExitAnim="@anim/fade_out" />
+        <action
+            android:id="@+id/action_navigation_home_to_hollydayListFragment"
+            app:destination="@id/hollydayListFragment"
+            app:enterAnim="@anim/fade_in"
+            app:exitAnim="@anim/fade_out"
+            app:popEnterAnim="@anim/fade_in"
+            app:popExitAnim="@anim/fade_out" />
+        <action
+            android:id="@+id/action_navigation_home_to_officesFragment"
+            app:destination="@id/officesFragment"
+            app:enterAnim="@anim/slide_in"
+            app:exitAnim="@anim/fade_out"
+            app:popEnterAnim="@anim/fade_in"
+            app:popExitAnim="@anim/slide_out" />
+        <action
+            android:id="@+id/action_navigation_home_to_hospitalListFragment"
+            app:destination="@id/hospitalListFragment"
+            app:enterAnim="@anim/fade_in"
+            app:exitAnim="@anim/fade_out"
+            app:popEnterAnim="@anim/fade_in"
+            app:popExitAnim="@anim/fade_out" />
+        <action
+            android:id="@+id/action_navigation_home_to_hindiFragment"
+            app:destination="@id/hindiFragment"
+            app:enterAnim="@anim/fade_in"
+            app:exitAnim="@anim/fade_out"
+            app:popEnterAnim="@anim/fade_in"
+            app:popExitAnim="@anim/fade_out" />
+        <action
+            android:id="@+id/action_navigation_home_pop"
+            app:popUpTo="@id/navigation_home"
+            app:popUpToInclusive="true" />
+        <action
+            android:id="@+id/action_navigation_home_to_settingsFragment"
+            app:destination="@id/settingsFragment" />
+        <action
+            android:id="@+id/action_navigation_home_to_profileFragment"
+            app:destination="@id/profileFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/navigation_contacts"
+        android:name="com.nirwal.gailconnect.ui.contacts.ContactsFragment"
+        android:label="@string/title_contacts"
+        tools:layout="@layout/fragment_contacts" />
+
+    <fragment
+        android:id="@+id/navigation_news"
+        android:name="com.nirwal.gailconnect.ui.news.NewsFragment"
+        android:label="@string/title_news"
+        tools:layout="@layout/fragment_news" >
+        <action
+            android:id="@+id/action_navigation_news_to_webFragment"
+            app:destination="@id/webFragment"
+            app:enterAnim="@anim/slide_in"
+            app:exitAnim="@anim/fade_out"
+            app:popEnterAnim="@anim/fade_in"
+            app:popExitAnim="@anim/slide_out" />
+        <action
+            android:id="@+id/action_navigation_news_to_pdfReaderFragment"
+            app:destination="@id/pdfReaderFragment"
+            app:enterAnim="@anim/slide_in"
+            app:exitAnim="@anim/fade_out"
+            app:popEnterAnim="@anim/fade_in"
+            app:popExitAnim="@anim/slide_out" />
+    </fragment>
+    <dialog
+        android:id="@+id/GSTINDialog"
+        android:name="com.nirwal.gailconnect.ui.dialog.GSTINDialog"
+        android:label="GSTINDialog" />
+    <fragment
+        android:id="@+id/birthdayFragment"
+        android:name="com.nirwal.gailconnect.ui.birthdayList.BirthdayFragment"
+        android:label="fragment_birthday"
+        tools:layout="@layout/fragment_birthday" >
+        <action
+            android:id="@+id/action_birthdayFragment_to_birthdayWishFragment"
+            app:destination="@id/birthdayWishFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/usefulLinkFragment"
+        android:name="com.nirwal.gailconnect.ui.usefullink.UsefulLinkFragment"
+        android:label="fragment_useful_link"
+        tools:layout="@layout/fragment_useful_link" />
+    <fragment
+        android:id="@+id/gusestHouseListFragment"
+        android:name="com.nirwal.gailconnect.ui.guesthouselist.GuestHouseListFragment"
+        android:label="fragment_gusest_house_list"
+        tools:layout="@layout/fragment_guest_house_list" />
+    <fragment
+        android:id="@+id/hollydayListFragment"
+        android:name="com.nirwal.gailconnect.ui.hollydaylist.HollydayListFragment"
+        android:label="fragment_hollyday_list"
+        tools:layout="@layout/fragment_hollyday_list" />
+    <fragment
+        android:id="@+id/officesFragment"
+        android:name="com.nirwal.gailconnect.ui.offices.OfficesFragment"
+        android:label="fragment_offices"
+        tools:layout="@layout/fragment_offices" />
+    <fragment
+        android:id="@+id/hospitalListFragment"
+        android:name="com.nirwal.gailconnect.ui.hospitallist.HospitalListFragment"
+        android:label="fragment_hospital_list"
+        tools:layout="@layout/fragment_hospital_list" />
+    <fragment
+        android:id="@+id/webFragment"
+        android:name="com.nirwal.gailconnect.ui.web.WebFragment"
+        android:label="fragment_web"
+        tools:layout="@layout/fragment_web" />
+    <fragment
+        android:id="@+id/pdfReaderFragment"
+        android:name="com.nirwal.gailconnect.ui.pdf.PdfReaderFragment"
+        android:label="fragment_pdf_reader"
+        tools:layout="@layout/fragment_pdf_reader" />
+    <fragment
+        android:id="@+id/hindiFragment"
+        android:name="com.nirwal.gailconnect.ui.hindi.HindiFragment"
+        android:label="fragment_hindi"
+        tools:layout="@layout/fragment_hindi" >
+        <action
+            android:id="@+id/action_hindiFragment_to_pdfReaderFragment"
+            app:destination="@id/pdfReaderFragment"
+            app:enterAnim="@anim/slide_in"
+            app:exitAnim="@anim/fade_out"
+            app:popEnterAnim="@anim/fade_in"
+            app:popExitAnim="@anim/slide_out" />
+        <action
+            android:id="@+id/action_hindiFragment_to_wordBankFragment"
+            app:destination="@id/wordBankFragment"
+            app:enterAnim="@anim/slide_in"
+            app:exitAnim="@anim/fade_out"
+            app:popEnterAnim="@anim/fade_in"
+            app:popExitAnim="@anim/slide_out" />
+    </fragment>
+    <fragment
+        android:id="@+id/wordBankFragment"
+        android:name="com.nirwal.gailconnect.ui.hindi.WordBankFragment"
+        android:label="fragment_word_bank"
+        tools:layout="@layout/fragment_word_bank" />
+    <fragment
+        android:id="@+id/loginFragment"
+        android:name="com.nirwal.gailconnect.ui.login.LoginFragment"
+        android:label="fragment_login"
+        tools:layout="@layout/fragment_login" />
+    <fragment
+        android:id="@+id/settingsFragment"
+        android:name="com.nirwal.gailconnect.ui.setting.SettingsFragment"
+        android:label="SettingsFragment" />
+    <fragment
+        android:id="@+id/profileFragment"
+        android:name="com.nirwal.gailconnect.ui.login.ProfileFragment"
+        android:label="fragment_profile"
+        tools:layout="@layout/fragment_profile" />
+    <fragment
+        android:id="@+id/birthdayWishFragment"
+        android:name="com.nirwal.gailconnect.ui.birthdayList.BirthdayWishFragment"
+        android:label="fragment_birthday_wish"
+        tools:layout="@layout/fragment_birthday_wish" />
+</navigation>

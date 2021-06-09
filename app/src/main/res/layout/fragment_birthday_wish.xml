@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.birthdayList.BirthdayWishFragment">
+
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:layout_height="wrap_content"
+    android:layout_width="match_parent">
+
+    <ImageView
+        android:id="@+id/imageView3"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:hapticFeedbackEnabled="true"
+        android:paddingStart="40dp"
+        android:paddingTop="35dp"
+        android:paddingEnd="45dp"
+        android:paddingBottom="45dp"
+        android:rotation="353"
+        android:scaleType="fitXY"
+        android:src="@drawable/ic_baseline_person_24"
+        app:layout_constraintBottom_toBottomOf="@id/birthday_frame"
+        app:layout_constraintEnd_toEndOf="@id/birthday_frame"
+        app:layout_constraintStart_toStartOf="@id/birthday_frame"
+        app:layout_constraintTop_toTopOf="@id/birthday_frame" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.5" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="16dp"
+        app:layout_constraintBottom_toTopOf="@+id/message_btn"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txt_persion_name">
+
+        <EditText
+            android:id="@+id/birthday_msg"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:minHeight="100dp"
+            android:hint="@string/hint_wish_message"
+            android:inputType="textMultiLine"
+            android:minLines="3" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+
+    <ImageButton
+        android:id="@+id/message_btn"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_marginBottom="16dp"
+        android:background="@drawable/round_border_image"
+        android:backgroundTint="@color/primary_light"
+        android:foreground="@drawable/circular_ripple_selectable"
+        android:src="@drawable/ic_baseline_message_24"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/email_btn"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <ImageButton
+        android:id="@+id/email_btn"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:background="@drawable/round_border_image"
+        android:backgroundTint="@color/primary_light"
+        android:foreground="@drawable/circular_ripple_selectable"
+        android:src="@drawable/ic_baseline_markunread_24"
+        app:layout_constraintBottom_toBottomOf="@+id/message_btn"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/message_btn"
+        app:layout_constraintTop_toTopOf="@+id/message_btn" />
+
+    <TextView
+        android:id="@+id/txt_persion_name"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:padding="16dp"
+        tools:text="Person Name"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/guideline5" />
+
+    <View android:id="@+id/birthday_frame"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@drawable/birthday_frame1"
+        app:layout_constraintBottom_toTopOf="@+id/guideline5"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+</androidx.constraintlayout.widget.ConstraintLayout>
+
+</ScrollView>

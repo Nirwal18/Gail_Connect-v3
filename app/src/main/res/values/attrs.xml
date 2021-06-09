@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:tools="http://schemas.android.com/tools"
+    tools:shrinkMode="strict">
+    <declare-styleable name="AppWidgetAttrs">
+        <attr name="appWidgetBackgroundColor" format="color" />
+        <attr name="appWidgetTextColor" format="color" />
+    </declare-styleable>
+
+
+    <color name="card_background_color">@color/bg_card</color>
+
+</resources>

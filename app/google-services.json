@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "564302773209",
+    "project_id": "gail-connect-v3",
+    "storage_bucket": "gail-connect-v3.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:564302773209:android:6be7115d6451b322b477c8",
+        "android_client_info": {
+          "package_name": "com.nirwal.gailconnect"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "564302773209-hc9ae0n8pjad0nq2susnmvolhpipg1fl.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCEYAGtRpxohZ-g1n6BdVmXzxD9o5y8s-c"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "564302773209-hc9ae0n8pjad0nq2susnmvolhpipg1fl.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.contacts.ContactsFragment">
+
+
+    <ImageButton
+        android:id="@+id/img_back_btn"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:contentDescription="@string/back_button"
+        android:background="@drawable/square"
+        android:backgroundTint="@color/primary_dark"
+        android:foreground="@drawable/circular_ripple_selectable"
+        android:src="@drawable/ic_round_arrow_back_ios_24"
+        android:tint="@color/white"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/txt_title"
+        android:layout_width="0dp"
+        android:layout_height="48dp"
+        android:layout_toEndOf="@+id/img_back_btn"
+        android:background="@color/primary_dark"
+        android:gravity="center"
+        android:padding="8dp"
+        android:text="@string/contacts"
+        android:textColor="@color/white"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toStartOf="@+id/img_search_btn"
+        app:layout_constraintStart_toEndOf="@+id/img_back_btn"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <EditText
+        android:id="@+id/txt_search"
+        android:layout_width="0dp"
+        android:layout_height="48dp"
+        android:autofillHints="Name"
+        android:background="@color/primary_dark"
+        android:hint="@string/search_here"
+        android:imeOptions="actionDone"
+        android:inputType="text"
+        android:padding="8dp"
+        android:textColor="@color/white"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        android:visibility="gone"
+        app:layout_constraintEnd_toStartOf="@+id/img_search_btn"
+        app:layout_constraintStart_toEndOf="@+id/img_back_btn"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <ImageButton
+        android:id="@+id/img_search_btn"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:contentDescription="@string/contact_search_button"
+        android:background="@drawable/square"
+        android:backgroundTint="@color/primary_dark"
+        android:foreground="@drawable/circular_ripple_selectable"
+        android:src="@drawable/ic_baseline_search_24"
+        android:tint="@color/white"
+        app:layout_constraintEnd_toStartOf="@+id/img_menu_btn"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageButton
+        android:id="@+id/img_menu_btn"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:contentDescription="@string/option_button"
+        android:background="@drawable/square"
+        android:backgroundTint="@color/primary_dark"
+        android:foreground="@drawable/circular_ripple_selectable"
+        android:src="@drawable/ic_baseline_more_vert_24"
+        android:tint="@color/white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/contact_recycler"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/img_back_btn" />
+
+    <com.futuremind.recyclerviewfastscroll.FastScroller
+        android:id="@+id/fastscroll"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_alignParentEnd="true"
+        android:orientation="vertical"
+        app:fastscroll__bubbleColor="@color/primary_dark"
+        app:fastscroll__bubbleTextAppearance="@style/BubleScrollBarText"
+        app:fastscroll__handleColor="@color/primary"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/contact_recycler">
+
+    </com.futuremind.recyclerviewfastscroll.FastScroller>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

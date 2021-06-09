@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+        <item
+            android:id="@+id/filter_contact"
+            android:icon="@drawable/ic_baseline_filter_list_24"
+            android:title="@string/filter_contact"
+            app:showAsAction="always">
+                <menu>
+                        <group android:title="exp" android:checkableBehavior="single">
+                                <item android:id="@+id/filter_all"
+                                    android:title="All" />
+                                <item android:id="@+id/filter_by_loc"
+                                    android:title="By Location" />
+                                <item android:id="@+id/filter_by_loc_dep"
+                                    android:title="By location and Dept." />
+                        </group>
+                </menu>
+        </item>
+
+        <item
+            android:id="@+id/export_contact"
+            android:icon="@drawable/ic_baseline_add_to_home_screen_24"
+            android:title="@string/export_contacts"
+            app:showAsAction="always" />
+
+</menu>

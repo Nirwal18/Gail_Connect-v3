@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".ui.login.ProfileFragment">
+
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <TextView
+        android:id="@+id/txt_title"
+        android:layout_width="0dp"
+        android:layout_height="48dp"
+        android:layout_toEndOf="@+id/img_back_btn"
+        android:background="@color/primary_dark"
+        android:gravity="center"
+        android:padding="8dp"
+        android:text="@string/profile"
+        android:textColor="@color/white"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+
+    <ImageButton
+        android:id="@+id/img_back_btn"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:contentDescription="@string/back_button"
+        android:background="@drawable/square"
+        android:backgroundTint="@color/primary_dark"
+        android:foreground="@drawable/circular_ripple_selectable"
+        android:src="@drawable/ic_round_arrow_back_ios_24"
+        android:tint="@color/white"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <com.nirwal.gailconnect.customView.CircularImageView
+        android:id="@+id/profile_pic"
+        android:layout_width="128dp"
+        android:layout_height="128dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:elevation="5dp"
+        android:src="@drawable/color_1_bg"
+        app:layout_constraintBottom_toTopOf="@+id/card_name"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/card_name" />
+
+
+    <TextView
+        android:id="@+id/txt_name_first_char"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:elevation="6dp"
+        android:gravity="center"
+        android:maxLength="1"
+        android:maxLines="1"
+        android:singleLine="true"
+        android:text="A"
+        android:textAlignment="center"
+        android:textColor="#FFF"
+        android:textSize="80sp"
+        android:textStyle="bold"
+        android:visibility="visible"
+        app:layout_constraintBottom_toBottomOf="@id/profile_pic"
+        app:layout_constraintEnd_toEndOf="@+id/profile_pic"
+        app:layout_constraintStart_toStartOf="@id/profile_pic"
+        app:layout_constraintTop_toTopOf="@id/profile_pic" />
+
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/card_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="120dp"
+        android:layout_marginEnd="8dp"
+        app:cardCornerRadius="32dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <LinearLayout
+            android:id="@+id/linearLayout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center_horizontal"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/contact_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="80dp"
+                android:layout_marginEnd="16dp"
+                android:textAlignment="center"
+                android:textColor="@color/primary_text"
+                android:textIsSelectable="true"
+                android:textSize="24sp"
+                android:textStyle="bold"
+                tools:text="Akshay Kumar Nirwal" />
+
+            <TextView
+                android:id="@+id/contact_desig"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="8dp"
+                android:textIsSelectable="true"
+                android:textSize="18sp"
+                tools:text="Foreman (Instrumentation)" />
+
+            <TextView
+                android:id="@+id/contact_dept_loc"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="8dp"
+                android:textIsSelectable="true"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                tools:text="Instrumentation, Gandhar" />
+
+            <TextView
+                android:id="@+id/contact_cpf"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginBottom="16dp"
+                android:textIsSelectable="true"
+                android:textSize="18sp"
+                tools:text="CPF : 00017592" />
+
+        </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp"
+        app:cardCornerRadius="32dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/card_name">
+
+        <TextView
+            android:id="@+id/about_txt"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:padding="16dp"
+            android:text="About text" />
+    </androidx.cardview.widget.CardView>
+</androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>

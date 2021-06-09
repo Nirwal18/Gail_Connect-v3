@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Theme.GailConnectV3" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+        <!-- Primary brand color. -->
+        <item name="colorPrimary">@color/primary</item>
+        <item name="colorPrimaryVariant">@color/primary_dark</item>
+        <item name="colorOnPrimary">@color/black</item>
+        <!-- Secondary brand color. -->
+        <item name="colorSecondary">@color/accent</item>
+        <item name="colorSecondaryVariant">@color/accent</item>
+        <item name="colorOnSecondary">@color/black</item>
+        <!-- Status bar color. -->
+        <item name="android:statusBarColor" tools:targetApi="l">?attr/colorPrimaryVariant</item>
+        <!-- Customize your theme here. -->
+    </style>
+
+    <style name="ThemeOverlay.GailConnectV3.AppWidgetContainer" parent="">
+        <item name="appWidgetBackgroundColor">@color/light_blue_900</item>
+        <item name="appWidgetTextColor">@color/light_blue_200</item>
+    </style>
+
+
+    <style name="SplashScreenTheme" parent="Theme.GailConnectV3">
+        <item name="android:windowBackground">@drawable/splash_image</item>
+        <item name="android:statusBarColor"  tools:targetApi="l">@color/primary</item>
+
+    </style>
+
+    <style name="PrimaryText" parent="android:Widget.TextView">
+        <item name="android:textColor">@color/primary_text</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textSize">14sp</item>
+    </style>
+
+    <style name="SecondaryText" parent="android:Widget.TextView">
+        <item name="android:textColor">@color/secondary_text</item>
+        <item name="android:textStyle">normal</item>
+        <item name="android:textSize">16sp</item>
+    </style>
+
+
+    <style name="BubleScrollBarText" parent="android:Widget.TextView">
+        <item name="android:color">@color/white</item>
+        <item name="android:textStyle">normal</item>
+        <item name="android:textSize">25sp</item>
+    </style>
+
+
+</resources>
